@@ -3,48 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentorship Platform for SLIET</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Mentorship Platform</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>SLIET Mentorship Platform</h1>
-        <p>Connect with faculty mentors for personalized guidance.</p>
-        <input type="text" id="mentorSearch" placeholder="Search by expertise...">
-    </header>
 
-    <section id="mentors">
-        <h2>Faculty Mentors</h2>
-        <div class="mentor-container">
-            <div class="mentor-card" data-expertise="AI, ML, Data Science">
-                <img alt="Mentor Image">
-                <h3>Dr. Rajesh Kumar</h3>
-                <p>Experience: 12+ years in AI & Machine Learning</p>
-                <p>Expertise: AI, ML, Data Science</p>
-                <button class="availability-btn" onclick="showAvailability('Rajesh Kumar')">View Availability</button>
+<div class="container">
+   
+    <h2>Filter Mentors</h2>
+    <div class="filter">
+        <label><input type="checkbox" id="machine-learning"> Machine Learning</label>
+        <label><input type="checkbox" id="career-guidance"> Career Guidance</label>
+        
+    </div>
+
+    
+    <h2>Mentor Profiles</h2>
+    
+    <div class="mentor-cards-container">
+        <div class="mentor-card" data-name="Dr. Jane Doe" data-expertise="Software Engineering Expert">
+            <div class="mentor-card-inner">
+                <div class="mentor-card-front">
+                    <img src="mentor1.jpg" alt="Mentor Photo">
+                    <h3>Dr. Jane Doe</h3>
+                    <p>Software Engineering Expert</p>
+                </div>
+                <div class="mentor-card-back">
+                    <h3>Dr. Jane Doe</h3>
+                    <p>Experience: 15 years in AI & ML</p>
+                    <p>Guides in: Machine Learning, Software Engineering, Career Advice</p>
+                    <button class="book-session">Book a Session</button>
+                </div>
             </div>
         </div>
-    </section>
 
-
-    <section id="booking">
-        <h2>Book a Session</h2>
-        <div id="calendar">
-
+        <div class="mentor-card" data-name="Dr. John Smith" data-expertise="Data Science Specialist">
+            <div class="mentor-card-inner">
+                <div class="mentor-card-front">
+                    <img src="mentor2.jpg" alt="Mentor Photo">
+                    <h3>Dr. John Smith</h3>
+                    <p>Data Science Specialist</p>
+                </div>
+                <div class="mentor-card-back">
+                    <h3>Dr. John Smith</h3>
+                    <p>Experience: 12 years in Data Science</p>
+                    <p>Guides in: Data Science, Big Data, Machine Learning</p>
+                    <button class="book-session">Book a Session</button>
+                </div>
+            </div>
         </div>
-    </section>
 
+        <div class="mentor-card" data-name="Dr. Emily Clark" data-expertise="Cybersecurity Expert">
+            <div class="mentor-card-inner">
+                <div class="mentor-card-front">
+                    <img src="mentor3.jpg" alt="Mentor Photo">
+                    <h3>Dr. Emily Clark</h3>
+                    <p>Cybersecurity Expert</p>
+                </div>
+                <div class="mentor-card-back">
+                    <h3>Dr. Emily Clark</h3>
+                    <p>Experience: 10 years in Cybersecurity</p>
+                    <p>Guides in: Cybersecurity, Ethical Hacking, Network Security</p>
+                    <button class="book-session">Book a Session</button>
+                </div>
+            </div>
+        </div>
 
-    <div id="confirmationModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h3>Confirm Booking</h3>
-            <p>Do you want to confirm this booking?</p>
-            <button onclick="confirmBooking()">Yes</button>
-            <button onclick="closeModal()">No</button>
+        <div class="mentor-card" data-name="Dr. William Lee" data-expertise="Cloud Computing Expert">
+            <div class="mentor-card-inner">
+                <div class="mentor-card-front">
+                    <img src="mentor4.jpg" alt="Mentor Photo">
+                    <h3>Dr. William Lee</h3>
+                    <p>Cloud Computing Expert</p>
+                </div>
+                <div class="mentor-card-back">
+                    <h3>Dr. William Lee</h3>
+                    <p>Experience: 8 years in Cloud Computing</p>
+                    <p>Guides in: AWS, Cloud Architecture, DevOps</p>
+                    <button class="book-session">Book a Session</button>
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="main.js"></script>
+    
+    <h2>Rate Your Mentor</h2>
+    <div class="rating">
+        <h3>Rate your session with Dr. Jane Doe</h3>
+        <div class="stars">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+        </div>
+        <textarea placeholder="Leave feedback..."></textarea>
+        <button>Submit</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
