@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentorship Platform for SLIET</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>SLIET Mentorship Platform</h1>
+        <p>Connect with faculty mentors for personalized guidance.</p>
+        <input type="text" id="mentorSearch" placeholder="Search by expertise...">
+    </header>
+
+    <section id="mentors">
+        <h2>Faculty Mentors</h2>
+        <div class="mentor-container">
+            <div class="mentor-card" data-expertise="AI, ML, Data Science">
+                <img alt="Mentor Image">
+                <h3>Dr. Rajesh Kumar</h3>
+                <p>Experience: 12+ years in AI & Machine Learning</p>
+                <p>Expertise: AI, ML, Data Science</p>
+                <button class="availability-btn" onclick="showAvailability('Rajesh Kumar')">View Availability</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="booking">
+        <h2>Book a Session</h2>
+        <div id="calendar">
+
+        </div>
+    </section>
+
+
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Confirm Booking</h3>
+            <p>Do you want to confirm this booking?</p>
+            <button onclick="confirmBooking()">Yes</button>
+            <button onclick="closeModal()">No</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

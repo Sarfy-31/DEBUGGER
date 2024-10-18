@@ -1,0 +1,178 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FDFDFF; /* Soft white background */
+    color: #393D3F; /* Dark gray for text */
+}
+
+header {
+    text-align: center;
+    background-color: #62929E; /* Teal header */
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header input {
+    padding: 10px;
+    width: 50%;
+    margin: 10px 0;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Sections */
+section {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #393D3F; /* Dark gray for headings */
+}
+
+/* Mentor Profile Cards */
+.mentor-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.mentor-card {
+    background-color: #cdecff; /* Soft mint green for cards */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mentor-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.mentor-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.mentor-card h3 {
+    font-size: 1.5rem;
+    color: #393D3F; /* Dark gray for mentor names */
+}
+
+/* Button Styles */
+.availability-btn {
+    background-color: #009688; /* Darker teal for buttons */
+    color: #FFFFFF; /* White text for contrast */
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.availability-btn:hover {
+    background-color: #00796B; /* Darker teal on hover */
+    transform: scale(1.05); /* Slightly scale up */
+}
+
+/* Booking Calendar */
+#calendar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Slot Booking Styles */
+.slot {
+    width: 160px; /* Adjusted width */
+    padding: 12px;
+    background-color: #A7E3D9; /* Soft mint green for slots */
+    border-radius: 6px;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.5s, transform 0.3s;
+}
+
+.slot.booked {
+    background-color: #FF5722; /* Light coral for booked slots */
+    color: white;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.slot.available {
+    background-color: #009688; /* Darker teal for available slots */
+    color: #FFFFFF; /* White text for contrast */
+}
+
+.slot.available:hover {
+    background-color: #00796B; /* Darker teal on hover */
+    transform: scale(1.05); /* Scale on hover */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.modal .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mentor-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    header input {
+        width: 90%;
+    }
+}
